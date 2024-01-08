@@ -1,0 +1,267 @@
+.gogo {
+    max-width: 2300px;
+  color: #fff;
+  display: block;
+
+  padding-top: 20px;
+  cursor: pointer;
+}
+.head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+}
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 50px;
+  padding-left: 50px;
+}
+.head-text {
+  font-size: 14px;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  padding-left: 20px;
+}
+.weather {
+  font-size: 16px;
+  font-weight: 400;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 30px;
+  padding-left: 50px;
+
+  margin-left: 400px;
+}
+.card-1 {
+
+  display: grid;
+  align-content: start;
+  grid-template-columns: repeat (4, 1fr, 1fr, 1fr, 1fr);
+  grid-template-rows: 50% 50% 50% 50%;
+
+  margin-left: 15px;
+  margin-top: 20px;
+
+  margin-bottom: 20px;
+  background-color: #ccc;
+
+  gap: 10px;
+
+  flex-wrap: wrap;
+  shadow: 1px 1px 1px;
+}
+
+.card-text { 
+  grid-column: 1/3;
+  grid-row: 1/2;
+  font-size: 16px;
+  color: #fff;
+  width: 400;
+max-width: 900px;
+  padding-left: 40px;
+}
+
+.text-1 {
+    
+  font-size: 16px;
+  color: #fff;
+  width: 400;
+  background-color: darkorange;
+  border-radius: 3px;
+}
+.img-2 {
+  grid-column: 3/5;
+  grid-row: 1/2;
+max-width: 80%;
+  gap: 10px;
+}
+
+.box-1 {
+  grid-column: 1/2;
+  grid-row: 2;
+  border-width: 20px;
+}
+.box-2 {
+  grid-column: 2/3;
+}
+.box-3 {
+  grid-column: 3/4;
+}
+.box-4 {
+  grid-column: 4/5;
+}
+@media only screen and (max-width: 500px) {
+  .card-text {
+    width: 100%;
+    background-color: aqua;
+  }
+}
+.card-2 {
+  margin-top: 40px;
+  display: block;
+}
+.card-back {
+  background-color: rgba(192, 223, 255, 251);
+}
+.story {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 400px;
+  display: block;
+  font-size: 26px;
+  font-weight: 400px;
+  columns: #000;
+  font-size: 18px;
+
+  gap: 10px;
+}
+.story-text-2 {
+  font-size: 18px;
+  color: #fff;
+  background-color: #00b0f4;
+  border-radius: 3px;
+}
+.story-image {
+  margin-top: 20px;
+  gap: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+}
+
+.contentbody{
+  display: block;
+  color: #fff;
+  text-shadow: none;
+}
+.uk-container{
+  display: flow-root;
+  box-sizing: content-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media only screen and (min-width: 960px){
+.uk-container{
+ padding-left: 40px;
+ padding-right: 40px;
+}
+}
+
+.uk-grid-divider .uk-grid-column-large, .uk-grid-divider .uk-grid-large{
+ margin-left: -80px
+}
+.uk-container>:last-child{
+  margin-bottom: 0;
+}
+.margin-top-50{
+  margin-top: 50px
+}
+.uk-grid-diver{
+  margin-left: 60px;
+}
+.uk-grid-column-large, .uk-grid-large{
+margin-left: 40px;
+}
+.uk-grid{
+  margin-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: nonex;
+}
+.uk-grid>*>:last-child{
+  margin-bottom: 0;
+}
+[class*=uk-width]{
+box-sizing: border-box;
+width: 100%;
+max-width: 100%;
+}
+.uk-width-expand{
+  flex: 1;
+  max-width: 1px;
+}
+.margin-top-10{
+  margin-right: -50px;
+  z-index: 100;
+  position: relative;
+}
+.uk-grid-column-small, .uk-grid-small{
+  margin-left: -15px;
+  padding-left: 15px;
+}
+.uk-width-1-6{
+  width: 16.66389%;
+}
+.home-calendar-container.active .home-calendar-text{
+  margin-top: -34px;
+  color: #407ce8;
+}
+.home-calendar-container{
+  display: block;
+  transition: all .4s ease-in-out;
+  color: #b7b6b6;
+}
+.uk-link, a{
+  text-decoration: none;
+  cursor: pointer;
+  background-color: unset;
+   transition: all .2s ease-in-out;
+}
+.text-16{
+  font-size: 16px! important;
+  line-height: 24px! important;
+}
+.margin-bottom-5{
+  margin-bottom: 5px;
+}
+.uk-text-bold{
+  font-weight: 700;
+}
+canvas, img, video{
+  max-width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+audio, canvas, iframe, img, svg, video{
+  vertical-align: middle;
+}
+img{
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+.calendar-one-day{
+  height: 7px;
+  background-color: #efefef;
+  border-radius: 20px;
+  transition: all .4s ease-in-out;
+}
+.home-calendar-text{
+  color: #b7b6bb;
+  font-size: 13px;
+  text-align: center;
+}
+@media (max-width: 1070px) and (min-width: 961px) {
+  .home-calendar-container .home-calendar-text{
+    font-size: 10px;
+  }
+}

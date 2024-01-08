@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./todo.css" />
+  </head>
+  <body>
+    <div class="todo">
+      <div>
+        <img class="todo-image"
+          src="pexels-james-wheeler-417074.jpg"
+          alt=""
+        />
+      </div>
+
+      <div class="container" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <p>To do</p>
+        <div
+          ondragstart="drag(event)"
+          class="box"
+          draggable="true"
+          id="container-1"
+        ></div>
+        <p onclick="show()" id="add-todo-button">Add card</p>
+        <p></p>
+      </div>
+
+      <div class="container-1">
+        <p>To do</p>
+        <div
+          ondragover="allowDrop(event)"
+          ondrop="drop(event)"
+          id="container-2"
+        ></div>
+        <p onclick="show()" id="add-todo-button">Add card</p>
+      </div>
+
+      <div class="outtodo">
+        <div class="outtodo-modal">
+          <p>Title</p>
+          <input id="title-input" type="text" />
+          <p>description</p>
+          <input id="description-input" type="text" />
+          <p>status</p>
+          <input id="status-input" type="text" />
+          <p>priority</p>
+          <input id="priority-input" type="text" />
+          <button onclick="addTodo()">Submit</button>
+          <button onclick="hide()">hide</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const boxArray = [
+        {
+          Title: "Read book",
+          Description: "Huuhdin nom olj unshih",
+          Status: "todo",
+          Priority: "low",
+        },
+        {
+          Title: "Read book",
+          Description: "Huuhdin nom olj unshih",
+          Status: "todo",
+          Priority: "low",
+        },
+      ];
+
+      const render = () => {
+        let boxString = "";
+        boxArray.forEach((el) => {
+          boxString += `<div
+        ondragstart="drag(event)"
+        class="box"
+        draggable="true"
+        id="box-${el}">
+        <p>${el.Title}</p>
+        <p>${el.Description}</p>
+        <p>${el.Status}</p>
+        <p>${el.Priority}</p>
+        </div>`;
+        });
+        document.getElementById("container-1").innerHTML = boxString;
+      };
+      render();
+
+      const allowDrop = (event) => {
+        event.preventDefault();
+      };
+      const drag = (event) => {
+        event.dataTransfer.setData("text", event.target.id);
+      };
+      const drop = (event) => {
+        event.preventDefault();
+        const boxId = event.dataTransfer.getData("text");
+        event.target.appendChild(document.getElementById(boxId)); // orj irsen data-gaa end ashiglana
+      };
+      function show() {
+        document.getElementsByClassName("outtodo")[0].classList.add("show");
+      }
+
+      const outtodo = document.getElementsByClassName("outtodo")[0];
+      outtodo.addEventListener("click", () => {
+        outtodo.classList.remove("show");
+      });
+
+      const addTodo = () => {
+        const titleInputValue = document.getElementById("title-input").value;
+        const descriptionInputValue =
+          document.getElementById("description-input").value;
+        const statusInputValue = document.getElementById("status-input").value;
+        const priorityInputValue =
+          document.getElementById("priority-input").value;
+        console.log(Math.random());
+        const inputObj = {
+          id: Math.random().toString(),
+          title: titleInputValue,
+          Description: descriptionInputValue,
+          Status: statusInputValue,
+          Priority: priorityInputValue,
+        };
+        boxArray.push(inputObj);
+        render();
+      };
+      const hide = () => {
+        document
+          .getElementsByClassName("modalContainer")[0]
+          .classList.remove("show");
+      };
+    </script>
+  </body>
+</html>

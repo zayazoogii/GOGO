@@ -1,0 +1,21 @@
+.backround {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: plum;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+}
+ .color {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: blue;
+} 
+/* .backround:hover{
+    background-color: blue;
+} */
